@@ -1,0 +1,45 @@
+[Basic]
+run_name = 'LSCodecSynthetic'
+run_folder = './runs/lscodec'
+
+[Data]
+data_root = './processed/synthetic'
+data_range = [128, 320]
+data_alpha = 0.1
+data_overlap = 0.4
+data_scale = 'small'
+num_work = 0
+
+[Train]
+lr = 1e-4
+weight_decay = 1e-2
+warmup_steps = 10
+grad_norm = 1.0
+batch_size = 16
+valid_size = 20
+force_rebuild = true
+
+progress = true
+enable_schedule = false
+max_epoch = 200
+max_iters = 200_000
+save_every_iter = 5000
+print_every_iter = 200
+resume = true
+
+[LSCodec]
+n_feat = 30
+n_latent = 256
+strides = [2, 2, 2]
+n_kernel = 3
+n_layer = 3
+n_lstm = 1
+n_cycle = 12
+dropout=0.1
+
+[Loss]
+lambda_rec = 1.0
+lambda_rec_g = 1.0
+lambda_rec_l = 1.0
+lambda_commit = 10.0
+enable_balancer = false

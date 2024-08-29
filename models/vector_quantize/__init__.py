@@ -1,0 +1,8 @@
+from models.vector_quantize.vector_quantize_pytorch import VectorQuantize
+from models.vector_quantize.residual_vq import ResidualVQ, GroupedResidualVQ
+from models.vector_quantize.random_projection_quantizer import RandomProjectionQuantizer
+from models.vector_quantize.finite_scalar_quantization import FSQ
+from models.vector_quantize.lookup_free_quantization import LFQ
+from models.vector_quantize.residual_lfq import ResidualLFQ, GroupedResidualLFQ
+from models.vector_quantize.residual_fsq import ResidualFSQ, GroupedResidualFSQ
+
